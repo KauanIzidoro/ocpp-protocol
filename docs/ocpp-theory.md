@@ -7,23 +7,18 @@ A camada física define o meio físico de transmissão de dados entre o carregad
 
 > Meio físico:
 
-    O OCPP não especifica diretamente o meio físico, pois opera em camadas superiores. No entanto, na prática, a comunicação ocorre geralmente sobre redes `IP` (Internet Protocol), utilizando:
-    
-    - Ethernet: Conexões cabeadas usando cabos Ethernet (ex.: Cat5e, Cat6) são comuns em carregadores instalados em locais fixos, como estações de carregamento públicas ou garagens.
+O OCPP não especifica diretamente o meio físico, pois opera em camadas superiores. No entanto, na prática, a comunicação ocorre geralmente sobre redes `IP` (Internet Protocol), utilizando:
 
-    - Wi-Fi: Muitos carregadores utilizam redes Wi-Fi (IEEE 802.11) para comunicação, especialmente em locais onde cabeamento Ethernet não é viável.
-
-    - Redes Celulares: Em áreas remotas ou para carregadores móveis, é comum o uso de redes celulares (3G, 4G, 5G) com modems integrados no EVSE.
-
-    - PLC (Power Line Communication): Embora menos comum, alguns carregadores podem usar comunicação por linha de energia, especialmente em cenários onde a infraestrutura elétrica já está instalada.
+- Ethernet: Conexões cabeadas usando cabos Ethernet (ex.: Cat5e, Cat6) são comuns em carregadores instalados em locais fixos, como estações de carregamento públicas ou garagens.
+- Wi-Fi: Muitos carregadores utilizam redes Wi-Fi (IEEE 802.11) para comunicação, especialmente em locais onde cabeamento Ethernet não é viável.
+- Redes Celulares: Em áreas remotas ou para carregadores móveis, é comum o uso de redes celulares (3G, 4G, 5G) com modems integrados no EVSE.
+- PLC (Power Line Communication): Embora menos comum, alguns carregadores podem usar comunicação por linha de energia, especialmente em cenários onde a infraestrutura elétrica já está instalada.
 
 > Conexão Física: 
 
-    - No caso de Ethernet, o EVSE possui porta RJ45 para conexão a um switch ou roteador.
-
-    - Para Wi-Fi, o EVSE inclui um módulo Wi-FI que se conecta a um ponto de acesso.
-
-    - Para redes celulares, o EVSE possui um modem com um cartão SIM para acesso à rede.
+- No caso de Ethernet, o EVSE possui porta RJ45 para conexão a um switch ou roteador.
+- Para Wi-Fi, o EVSE inclui um módulo Wi-FI que se conecta a um ponto de acesso.
+- Para redes celulares, o EVSE possui um modem com um cartão SIM para acesso à rede.
 
 ## 2. Camada de Enlace de Dados
 
@@ -31,25 +26,21 @@ A camada de enlace de dados gerencia a comunicação entre dispositivos na mesma
 
 > Protocolos Utilizados:
 
-    - Ethernet (IEEE 802.3): Para conexões cabeadas, o protocolo Ethernet é usado, com endereçamento MAC para identificar dispositivos na rede local.
-
-    - Wi-Fi (IEEE 802.11): Para conexões sem fio, o protocolo Wi-Fi gerencia o acesso ao meio, incluindo autenticação (ex.: WPA2/WPA3) e controle de acesso ao meio (CSMA/CA).
-
-    - PPP (Point-to-Point Protocol): Em redes celulares, o PPP pode ser usado para estabelecer uma conexão de dados confiável sobre a camada física.
-
+- Ethernet (IEEE 802.3): Para conexões cabeadas, o protocolo Ethernet é usado, com endereçamento MAC para identificar dispositivos na rede local.
+- Wi-Fi (IEEE 802.11): Para conexões sem fio, o protocolo Wi-Fi gerencia o acesso ao meio, incluindo autenticação (ex.: WPA2/WPA3) e controle de acesso ao meio (CSMA/CA).
+- PPP (Point-to-Point Protocol): Em redes celulares, o PPP pode ser usado para estabelecer uma conexão de dados confiável sobre a camada física.
 
 ## 3. Camada de Rede
 
 Responsável pelo roteamento de pacotes através de redes, o OCPP utiliza o Protocolo Internet (IP), geralmente IPv4 ou IPv6:
 
-     - Cada estação de carregamento e sistema central possui um endereço IP, permitindo comunicação através de redes locais (LAN) ou internet (WAN).
-
-     - O roteamento é gerenciado por dispositivos como roteadores, usando tabelas de roteamento baseadas em protocolos como OSPF ou BGP.
-
-     - A camada 3 assegura que os pacotes cheguem ao destino correto, independentemente da topologia de rede.
-
+- Cada estação de carregamento e sistema central possui um endereço IP, permitindo comunicação através de redes locais (LAN) ou internet (WAN).
+- O roteamento é gerenciado por dispositivos como roteadores, usando tabelas de roteamento baseadas em protocolos como OSPF ou BGP.
+- A camada 3 assegura que os pacotes cheguem ao destino correto, independentemente da 
+topologia de rede.
 
 ## 4. Camada de Transporte
+
 
 O OCPP depende do TCP (Transmission Control Protocol) para garantir entrega confiavel:
 
