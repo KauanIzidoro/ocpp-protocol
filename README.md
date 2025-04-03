@@ -17,4 +17,11 @@ O `OCPP` segue um modelo cliente-servidor e é baseado em comunicação assíncr
 
 JSON-RPC é um protocolo de chamada de procedimento remoto (RPC) leve e sem estado. Basicamente, essa especificação define várias estruturas de dados e as regras em torno de seu processamento. É agnóstico em relação ao transporte, pois os conceitos podem ser usados ​​em `sockets`, `http` ou em muitos ambientes de passagem de mensagens. Ele usa JSON (RFC 4627) como formato de dados.
 
+> Próximos passos: 
 
+- Datasheet de carregadores e hardwares do ecossitemas.
+- Teste pratico com carregador.
+
+> Procurar artigos sobre os protocolos:
+
+- [IEEE](https://ieeexplore.ieee.org/document/8865690)
